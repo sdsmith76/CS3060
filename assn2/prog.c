@@ -4,6 +4,17 @@
 int cmpfunc(const void * a, const void * b) {
   return (*(int*)a - *(int*)b);
 }
+
+int mean(int * items, int count) {
+  int i;
+  int sum = 0;
+  for(i =0; i < count; i++) {
+      sum += items[i];
+  }
+  return sum / count;
+}
+
+
 int main() {
   int nums[100];
   
@@ -23,6 +34,8 @@ int main() {
   
   printf("smallest: %d\n", nums[0]);
   printf("largest: %d\n", nums[count - 1]);
-  
+  printf("mean: %d\n", mean(nums, count));
   return 0;
 }
+
+
