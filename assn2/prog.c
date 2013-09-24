@@ -14,7 +14,11 @@ int mean(int * items, int count) {
   return sum / count;
 }
 
-
+int median(int * items, int count) {
+  int mid = ((float)count / 2.0) + .6;
+  printf("mid %d\n", mid);
+  return items[mid];
+}
 int main() {
   int nums[100];
   
@@ -35,6 +39,7 @@ int main() {
   printf("smallest: %d\n", nums[0]);
   printf("largest: %d\n", nums[count - 1]);
   printf("mean: %d\n", mean(nums, count));
+  printf("median: %d\n", median(nums, count));
   return 0;
 }
 
