@@ -1,3 +1,3 @@
-prog: prog.c Makefile
-	gcc -g -Wall -Werror -o prog prog.c
+prog: assn2.c Makefile
+	gcc -g -Wall -Werror -o assn2 assn2.c
 #
