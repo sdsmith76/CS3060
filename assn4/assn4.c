@@ -12,6 +12,23 @@ int isPrime(int number) {
 	return 1;
 }
 
+int thread_func(void * properties) {
+
+}
+struct props {
+	int num;
+	int result;
+}
+
 int main() {
+	count = 0;
+	pthread_t threads[100];
+	int k;
+	while(fscanf(stdin, "%d", &k) == 1) {
+		struct props * p;
+		prop.num = k;
+		pthread_create(&threads[count], null, &thread_func, &p)  
+		count++;		                             #
+	}
 	return 0;
 }
