@@ -25,8 +25,9 @@ int main() {
 	int count = 0;
 	pthread_t threads[100];
 	int k;
+	struct props p;
 	while(fscanf(stdin, "%d", &k) == 1) {
-		struct props p;
+		p = malloc(sizeof(struct props));
 		p.num = k;
 		pthread_create(&threads[count], NULL, &thread_func, &p);  
 		count++;
