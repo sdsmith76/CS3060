@@ -32,5 +32,12 @@ int main() {
 		pthread_create(&threads[count], NULL, &thread_func, &p);  
 		count++;
 	}
+	int s;
+	for(s = 0; s < count; s++){
+		if(pthread_join(threads[s], NULL )== 0){
+			fprintf(stdout, "d%\n", status[s]);
+		}
+		free(status);
+	}
 	return 0;
 }
